@@ -1,4 +1,5 @@
-/*Complete the function printNumber which takes an integer input from the user and prints it on the screen.
+/*
+Complete the function printNumber which takes an integer input from the user and prints it on the screen.
 
 Example 1
 
@@ -8,7 +9,8 @@ Output: 7
 Example 2
 
 Input(user gives value): -5
-Output: -5*/
+Output: -5
+*/
 
 //----------------------------------------------
 
