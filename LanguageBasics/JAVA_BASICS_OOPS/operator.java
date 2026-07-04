@@ -1,5 +1,5 @@
 class operator{
-    public static void main(String[] args){
+    public static void main(String1[] args){
         //Arithmetic Operator
         //-,+,/,*,%
         // int num1 = 5;
@@ -35,6 +35,71 @@ class operator{
         // boolean fl1 = true;
         // boolean fl2 = !!fl1;
         // System.out.println(fl2);
+
+        //++ -> ++num or num++
+        // int num1 = 6;
+        // int num2 = num1++;
+        // System.out.println("num1: "+ num1);
+        // System.out.println("num2: "+ num2);
+
+        // int num1 = 6;
+        // int num2 = ++num1;
+        // System.out.println("num1: "+ num1);
+        // System.out.println("num2: "+ num2);
+
+        //----------------x------------
+
+        //Relational Operator
+        // ==, !=, >, <, >=, <= 
+        // int num1 = 6;
+        // int num2 = 7;
+        // // boolean result = num1 == num2;
+        // // boolean result = num1 >= num2;
+        // // boolean result = num1 <= num2;
+        // boolean result = num1 != num2;
+        // System.out.println("result: "+ result);
+
+        //-----------x-----------------
+
+        //Logical Operator
+        //&&,||
+
+        // boolean first = true;
+        // boolean second = true;
+        // boolean result = first && second && first;
+        // System.out.println(result);
+
+        // boolean first = true;
+        // boolean second = false;
+        // boolean result = first || second || first;
+        // System.out.println(result);
+
+        //-------------x------------------
+
+        //Assignment Operator
+        // int num1 = 7;
+        // int num2 = 8;
+        // int result = 8;
+        // result += num1 + num2;
+        // result -= num1 + num2;
+        // result /= num1 + num2;
+        // result %= num1 + num2;
+        // result *= num1 + num2;
+        // System.out.println(result);
+
+        //---------x------------------
+
+        //Ternary Operator
+        //condition ? first : second
+        int num1 = 6;
+        int num2 = 9;
+        int num3 = num1 > num2 ? num1 : num2;
+        System.out.println(num3);
+
+
+
+
+
 
 
 

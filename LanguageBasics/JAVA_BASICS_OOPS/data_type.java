@@ -1,5 +1,5 @@
 class data_type {
-    public static void main(String[] args){
+    public static void main(String1[] args){
 
         // -128 to 127
         // 8 bits
