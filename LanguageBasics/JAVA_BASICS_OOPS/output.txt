@@ -1,6 +1,2 @@
-6
-7
-9
-1
-2
-Sum: 25
+java.lang.ArithmeticException: / by zero
+done
