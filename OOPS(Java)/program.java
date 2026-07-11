@@ -84,27 +84,27 @@
 
 
 
-import java.util.Scanner;
-class Test{
-    int age;
-    //void method
-    public void assignAge(int num){
-        age = num;
+// import java.util.Scanner;
+// class Test{
+//     int age;
+//     //void method
+//     public void assignAge(int num){
+//         age = num;
         
-    }
-}
+//     }
+// }
 
-class program{
+// class program{
     // private static void prinnt(){
     //     System.out.println("print called");
     // }
 
-     private static int num(){
-        return 10;
-    }
+    //  private static int num(){
+    //     return 10;
+    // }
 
 
-    public static void main(String[] args) {
+    // public static void main(String[] args) {
         // prinnt();
         
         // Test test = new Test();
@@ -115,7 +115,25 @@ class program{
         // System.out.println(test.age);
         // System.out.println(test2.age);
 
-        System.out.println(num());
+//         System.out.println(num());
+//     }
+// }
+
+
+//------------X---------------------
+
+//Paramaterized Function
+
+class Test{
+    public int sum(int num1, int num2){
+        return num1+num2;
+    }
+}
+
+class program{
+    public static void main(String[] args){
+        Test test = new Test();
+        System.out.println(test.sum(10,15));
     }
 }
 
