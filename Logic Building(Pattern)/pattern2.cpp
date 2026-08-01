@@ -26,3 +26,6 @@ int main(){
     //*Note:
     //If we are using static then we need to use ::(scope resolution) to call the function without object
 }
+
+//T.C: O(N^2)
+//S.C: O(1)

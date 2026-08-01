@@ -9,7 +9,7 @@ class Solution{
                     cout << " ";
                 }
             
-              for(int j=0; j<(2*i)+1; j++){
+                for(int j=0; j<(2*i)+1; j++){
                     cout << "*";
                 }
                 cout << endl;
@@ -26,3 +26,7 @@ int main(){
     s.pattern6(n);
     return 0;
 }
+
+
+//T.C: O(N^2)
+//S.C: O(1)

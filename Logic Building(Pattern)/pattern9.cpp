@@ -19,7 +19,7 @@ class Solution{
 
 
             }
-              for(int i=0; i<n; i++){
+            for(int i=0; i<n; i++){
                 for(int j=0; j<i; j++){
                     cout << " ";
 
@@ -105,3 +105,9 @@ int main(){
 
 //     return 0;
 // }
+
+
+
+
+//T.C: O(N^2)
+//S.C: O(1)
