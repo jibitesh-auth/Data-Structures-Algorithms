@@ -25,17 +25,8 @@ class Solution{
                 }
                  cout <<endl;
 
-
-                
-                
-                
-                
-            
-           
             }
             
-            
-
         }
 };
 int main(){
@@ -45,3 +36,6 @@ int main(){
     s.pattern17(n);
     return 0;
 }
+
+//T.C: O(N^2)
+//S.C: O(1)

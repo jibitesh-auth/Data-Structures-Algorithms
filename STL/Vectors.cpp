@@ -30,15 +30,92 @@ void explainVector(){
 
 
     //*auto
-    auto beginItr = vec.begin();
-    auto endItr = vec.end();
+    // auto beginItr = vec.begin();
+    // auto endItr = vec.end();
     // for(auto i=beginItr; i<endItr; i++){
     //     cout << *i<<" ";
     // }
 
-    for(auto i: vec){
-        cout << i<<" ";    
-    }
+    // for(auto i: vec){
+    //     cout << i<<" ";    
+    // }
+
+    //*reverse iterator
+    // auto reverseBegin = vec.rbegin();
+    // auto reverseEnd = vec.rend();
+    // for(auto i= reverseBegin; i<reverseEnd; i++){
+    //     cout << *i << " ";
+    // }
+
+
+    //-------------x----------------------
+
+    // vector<int> vec1(5);
+
+    //vector<int> vec1(5,8);
+    // vec1.push_back(1);
+    // vec1.push_back(2);
+    // vec1.push_back(0);
+    // vec1.emplace_back(5);
+
+    // for(auto i: vec1){
+    //     cout << i<< " ";
+    // }
+
+
+    // vector<int> vec1={2,8};
+    // vec1.push_back(1);
+    // vec1.push_back(2);
+    // vec1.push_back(0);
+    // vec1.emplace_back(5);
+
+    //  for(auto i: vec1){
+    //     cout << i<< " ";
+    // }
+    
+    //*Copy Constructor
+    // vector<int> dupVec(vec1);
+    // vector<int> dupVec(vec1.begin()+1,vec1.end() - 1);
+    // for(auto i: dupVec){
+    //     cout << i << " ";
+    // }
+
+
+
+    //----------------x-------------------
+
+    // cout << vec.front() << " " << vec.back();
+
+    // vec.pop_back();
+    // cout << vec.back();
+
+    //-------------------x-----------------
+
+    //*erase
+    // vec.erase(vec.begin() + 1,vec.end() -1);
+
+
+    // for(auto i: vec){
+    //     cout << i << " ";
+    // }
+
+    //*clear
+
+    // vec.clear();
+    // for(auto i: vec){
+    //     cout << i << " ";
+    // }
+
+    //*access element
+    cout<< vec[2] <<endl;
+    cout << vec.at(2);
+
+
+
+
+
+
+
 
 
 
