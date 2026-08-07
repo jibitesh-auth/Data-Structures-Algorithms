@@ -10,6 +10,9 @@ void explainList(){
     }
 
     // cout << ls.front();
+
+    //*Not Possible
+    // auto it = ls.end() -1;
 }
 
 int main(){
