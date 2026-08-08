@@ -3,7 +3,7 @@ using namespace std;
 
 void explainPQ(){
     //*stores the highest element at the top
-    //*max heap
+    //*max heap(By default)
 
     // priority_queue<int> pq;
     // pq.push(5);

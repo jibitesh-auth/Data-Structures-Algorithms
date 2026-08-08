@@ -2,6 +2,8 @@
 using namespace std;
 
 void explainList(){
+    //*We can do push_front()
+    
     list<int> ls = {7,8,9};
     ls.push_back(1);
     // ls.emplace_front(1);
