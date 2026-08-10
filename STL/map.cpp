@@ -2,7 +2,8 @@
 using namespace std;
 
 void explainMap(){
-    //*unique,ascending order(key)
+    //*unique keys,ascending order(key)
+    //*Map are not consecutive as they are sorted on basis of keys
     map<int,string> mpp;
     mpp.insert({4,"raj"});
     mpp.emplace(5,"vivek");
@@ -38,6 +39,9 @@ void explainMap(){
     //*upperbound
     // auto it = mpp.upper_bound(2);
     // cout << (*it).first << "->"<<(*it).second<<endl;
+
+
+
 
 
 

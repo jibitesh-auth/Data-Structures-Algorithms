@@ -1,9 +1,13 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int main(){
-    //2^9
+void explainPow(){
     cout << pow(2,9);
+
+
+
+}
+int main(){
+    explainPow();
     return 0;
-    
 }
