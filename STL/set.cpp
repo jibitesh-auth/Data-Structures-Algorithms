@@ -26,7 +26,7 @@ void explainSet(){
     //*count
     // cout << st.count(21);
     // cout << st.count(100);
-    //*returns either 0->not found or 1-> found
+    //*returns either 0 or 1
 
     //*erase
     // st.erase(21);

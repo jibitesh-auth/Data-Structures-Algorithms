@@ -21,6 +21,7 @@ void explainMultiMap(){
     //*To print the existance of all 2
     auto it = mpp.equal_range(2);
     for(auto i = it.first; i!=it.second; i++){
+        //*Map are not consecutive as they are sorted on basis of keys
         cout << (*i).first << "->" << (*i).second << endl;
 
     }

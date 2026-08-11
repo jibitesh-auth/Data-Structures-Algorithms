@@ -26,6 +26,7 @@ void explainPQ(){
     //*min heap
 
     priority_queue<int, vector<int>, greater<int>> pq;
+    //*greater<int> is an internal comparator
     // priority_queue<char, vector<char>, greater<char>> pq;
     pq.push(2);
     pq.push(5);

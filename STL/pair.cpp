@@ -14,8 +14,6 @@ void explainPair(){
 
     cout << pr2.first.second << endl;
 
-
-    
 }
 
 int main(){

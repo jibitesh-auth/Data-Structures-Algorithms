@@ -51,8 +51,10 @@ void explainVector(){
     //-------------x----------------------
 
     // vector<int> vec1(5);
+    //*O/P: 0 0 0 0 0
 
     //vector<int> vec1(5,8);
+    //* O/P: 8 8 8 8 8
     // vec1.push_back(1);
     // vec1.push_back(2);
     // vec1.push_back(0);
@@ -72,6 +74,8 @@ void explainVector(){
     //  for(auto i: vec1){
     //     cout << i<< " ";
     // }
+
+    //* O/P: 2 8 1 2 0 5
     
     //*Copy Constructor
     // vector<int> dupVec(vec1);
@@ -130,25 +134,6 @@ void explainVector(){
     //     cout << it << " ";
     // }
     
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     
 };
 

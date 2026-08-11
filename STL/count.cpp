@@ -6,7 +6,10 @@ void explainCount(){
     //*Tells how many times that particular values appears
     // cout << count(arr,arr+5,1);
     int num = 1;
-    cout << count(arr,arr+5,num);
+    auto i = count(arr,arr+5,num);
+    cout << i;
+
+    
 
 }
 
