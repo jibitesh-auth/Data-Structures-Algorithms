@@ -109,5 +109,7 @@ int main(){
 
 //*Note: use rbegin(), rend() instead of begin(), end() in reverse ( because end() -1 for empty will give runtime error)
 
+//*In Divisor last value is included
+
 
 
