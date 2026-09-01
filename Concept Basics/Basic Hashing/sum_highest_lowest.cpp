@@ -158,3 +158,59 @@
 
 //*T.C: O(N)
 //*S.C: O(N)
+
+//-----------x-------------------
+
+#include <bits/stdc++.h>
+using namespace std;
+
+class Solution{
+    public:
+        int sum_highest_lowest(vector<int> vec,int n){
+            int maxcount = 0, lowcount = n;
+            int maxi = -1e9;
+            for(int i=0; i<n; i++){
+                if(vec[i] > maxi){
+                    maxi = vec[i];
+                }
+
+            }
+            vector<int> vis(maxi+1);
+
+            for(int i=0; i<n; i++){
+                if(vis[vec[i]] != 1){
+                    int count = 0;
+                    for(int j=0; j<n; j++){
+                        if(vec[i] == vec[j]){
+                            count++;
+
+                        }
+                        
+                    }
+                    vis[vec[i]] = 1;
+                    
+                    maxcount = max(count,maxcount);
+                    lowcount = min(lowcount,count);
+
+                }
+            }
+            return maxcount+lowcount;
+
+
+        }
+};
+int main(){
+    int n,x;
+    cin >> n;
+    vector<int> vec;
+    for(int i=0; i<n; i++){
+        cin >> x;
+        vec.push_back(x);
+    }
+    Solution s;
+    cout << s.sum_highest_lowest(vec,n);
+
+}
+
+//*T.C: O(N^2)
+//*S.C: O(N)
