@@ -3,7 +3,7 @@ using namespace std;
 
 void explainSet(){
     //*stores only unique elements
-    //*and in ascending order
+    //*and in ascending order  - sorted
 
     set<int> st;
     st.insert(2);
@@ -79,17 +79,6 @@ void explainSet(){
 
 
     //*Sets are non contgious(so we can't access particular element using s[i])
-
-
-
-
-    
-   
-
-
-    
-
-
 
 
 }

@@ -2,7 +2,7 @@
 using namespace std;
 
 void explainMap(){
-    //*unique keys,ascending order(key)
+    //*unique keys,ascending order(key)- sorted
     //*Map are not consecutive as they are sorted on basis of keys
     map<int,string> mpp;
     mpp.insert({4,"raj"});
