@@ -4,24 +4,32 @@ using namespace std;
 class Solution{
     public:
         bool isomorphicString(string s, string t){
-            map<char,char> mpp;
+            int sMap[256] = {0};
+            int tMap[256] = {0};
+
             for(int i=0; i<s.length(); i++){
-                mpp[s[i]] = t[i];
+                if(sMap[s[i]] != tMap[t[i]]){
+                    return false;
+                }
+
+                sMap[s[i]] = i+1;
+                tMap[t[i]] = i+1;
+
+
             }
 
-            for(auto it: mpp){
-                char key = it.first;
-                char value = it.second;
-
-                
-
-            }
+            return true;
         }
-
 };
 
-
 int main(){
-    return 0;
 
+    string s,t;
+    cin >> s>>t;
+    Solution s1;
+    cout << s1.isomorphicString(s,t);
+    return 0;
+    
 }
+
+
