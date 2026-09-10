@@ -10,17 +10,22 @@ bool internalComparator(pair<int,int> el1, pair<int, int> el2){
 }
 void explainComparatorQ(){
     pair<int, int> arr[] = {{1,6}, {1,5}, {2,6}, {2,9}, {3,9}};
-    //sort it according to 
-    //the second element
-    //{2,9}, {3,9}, {1,6}, {2,6}, {1,5}
+    /*
+    //*QUESTION:-
+        sort it according to
+        the second element
+        {2,9}, {3,9}, {1,6}, {2,6}, {1,5}
+    */
 
-    // sort(arr,arr+5);
+    //sort(arr,arr+5);
+    //*sorted according to first
+    //*if same then according to second
+    
     sort(arr,arr+5,internalComparator);
     for(int i=0; i<5; i++){
         cout << "{" << arr[i].first <<"," << arr[i].second << "}" <<" ";
 
-        //*sorted according to first
-        //*if same then according to second
+        
     }
 
 
