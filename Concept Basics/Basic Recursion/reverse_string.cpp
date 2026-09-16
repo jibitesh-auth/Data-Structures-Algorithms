@@ -1,37 +1,82 @@
+// #include <bits/stdc++.h>
+// using namespace std;
+
+// class Solution{
+//     public:
+//         vector<char> reverseString(vector<char>& s){
+//             reverse(s,0,s.size()-1);
+//             return s;
+            
+//         }
+
+//     private:
+        // void reverse(vector<char>& s, int left, int right){
+        //     if(left >= right){
+        //         return;
+        //     }
+        //     char temp = s[left];
+        //     s[left] = s[right];
+        //     s[right] = temp;
+        //     reverse(s,left+1,right-1);
+        // }
+// };
+
+// int main(){
+//     vector<char> vec;
+//     char c;
+//     while(cin >> c){
+//         vec.push_back(c);
+//     }
+//     Solution sol;
+//     vector<char> v = sol.reverseString(vec);
+
+//     for(auto it: v){
+//         cout << it << " ";
+//     }
+
+
+//     return 0;
+// }
+
+//*T.C: O(N/2): O(N)
+//*S.C: O(N/2): O(N)
+
+//-----------x--------------
+
+//*OR
+
 #include <bits/stdc++.h>
 using namespace std;
 
 class Solution{
     public:
+        vector<char> ch;
         vector<char> reverseString(vector<char>& s){
-            reverse(s,0,s.size()-1);
-            return s;
-            
-        }
-
-    private:
-        void reverse(vector<char>& s, int i, int j){
-            if(i >= j){
-                return;
-            }
-            swap(s[i],s[j]);
-            reverse(s,i+1,j-1);
+            if(s.empty()) return ch;
+            ch.push_back(s.back());
+            s.pop_back();
+            return reverseString(s);
         }
 };
 
 int main(){
     vector<char> vec;
-    char c;
-    while(cin >> c){
-        vec.push_back(c);
+    char x;
+    while(cin >> x){
+        vec.push_back(x);
     }
     Solution sol;
     vector<char> v = sol.reverseString(vec);
-
     for(auto it: v){
         cout << it << " ";
     }
 
-
     return 0;
 }
+
+//*T.C: O(N)
+//*S.C: O(N)
+
+
+
+
