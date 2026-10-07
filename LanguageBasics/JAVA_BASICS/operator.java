@@ -1,6 +1,6 @@
 class operator{
     public static void main(String1[] args){
-        //Arithmetic Operator
+        //*Arithmetic Operator
         //-,+,/,*,%
         // int num1 = 5;
         // int num2 = 12;
@@ -18,7 +18,7 @@ class operator{
 
         //------------x------------
         
-        //Unary Operator
+        //*Unary Operator
         // +,-,++,--,!
         // int num1 = -6;
         // int num2 = -num1;
@@ -49,19 +49,19 @@ class operator{
 
         //----------------x------------
 
-        //Relational Operator
+        //*Relational Operator
         // ==, !=, >, <, >=, <= 
         // int num1 = 6;
         // int num2 = 7;
-        // // boolean result = num1 == num2;
-        // // boolean result = num1 >= num2;
-        // // boolean result = num1 <= num2;
+        // boolean result = num1 == num2;
+        // boolean result = num1 >= num2;
+        // boolean result = num1 <= num2;
         // boolean result = num1 != num2;
         // System.out.println("result: "+ result);
 
         //-----------x-----------------
 
-        //Logical Operator
+        //*Logical Operator
         //&&,||
 
         // boolean first = true;
@@ -76,7 +76,7 @@ class operator{
 
         //-------------x------------------
 
-        //Assignment Operator
+        //*Assignment Operator
         // int num1 = 7;
         // int num2 = 8;
         // int result = 8;

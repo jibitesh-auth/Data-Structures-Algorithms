@@ -6,7 +6,7 @@ int main(){
     // cout << &num;
 
     // int num[5] = {5,2,1,3,7};
-    // // cout<< num[0];
+    // cout<< num[0];
     // for(int i=0; i<5; i++){
     //     cout << num[i]<<endl;
     // }

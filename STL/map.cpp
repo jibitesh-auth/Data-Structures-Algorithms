@@ -12,11 +12,11 @@ void explainMap(){
     mpp[2] = "jibitesh";
     mpp[3] = "ankita";
 
-    cout << mpp.size();
+    // cout << mpp.size();
 
     // for(auto it: mpp){
     //     cout << it.first << "->" << it.second<<endl;
-    //*Pair is used(Points to the pair)
+    //*Pair is used
     // }
 
     //-------------x----------------
@@ -32,21 +32,13 @@ void explainMap(){
 
     //--------------------x-----------
 
-    //*lowerbound
-    // auto it = mpp.lower_bound(2);
-    // cout << (*it).first << "->"<<(*it).second<<endl;
+    //*lowerbound[>=]
+    auto it = mpp.lower_bound(2);
+    cout << (*it).first << "->"<<(*it).second<<endl;
 
-    //*upperbound
+    //*upperbound[>]
     // auto it = mpp.upper_bound(2);
     // cout << (*it).first << "->"<<(*it).second<<endl;
-
-
-
-
-
-
-
-
 
 
 }

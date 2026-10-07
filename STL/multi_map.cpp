@@ -16,15 +16,19 @@ void explainMultiMap(){
     //     cout << it.first << "->" <<it.second << endl;
     // }
 
+    auto it = mpp.find(1);
+    cout << (*it).first << "->"<< (*it).second;
+    //*Returns the first occurence
 
     //*here it.second act as it.end()
     //*To print the existance of all 2
-    auto it = mpp.equal_range(2);
-    for(auto i = it.first; i!=it.second; i++){
+    
+    // auto it = mpp.equal_range(2);
+    // for(auto i = it.first; i!=it.second; i++){
         //*Map are not consecutive as they are sorted on basis of keys
-        cout << (*i).first << "->" << (*i).second << endl;
+    //     cout << (*i).first << "->" << (*i).second << endl;
 
-    }
+    // }
 
 
 

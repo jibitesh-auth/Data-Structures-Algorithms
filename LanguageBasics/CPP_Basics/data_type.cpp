@@ -4,11 +4,11 @@ using namespace std;
 
 int main() {
 
-    // // range -> [-10^9, 10^9]
+    // range -> [-10^9, 10^9]
     // int numInt = INT_MAX;
     // cout << numInt << endl;
 
-    // // range -> [10^18]
+    // range -> [10^18]
     // long long numLong = LLONG_MAX;
     // cout << numLong;
 
@@ -23,8 +23,8 @@ int main() {
     // char ch = 'a';
     // cout << ch;
 
-    string str = "tuf";
-    cout << str;
+    // string str = "tuf";
+    // cout << str;
     
 
 

@@ -1,4 +1,6 @@
 /*
+//*Question:-
+
 Problem: Grade Calculator
 
 Problem Statement:
@@ -57,14 +59,9 @@ Constraints:
 0 <= marks <= 100
 */
 
-
-
-
 //----------------------x----------------------------
 
-
-
-
+//*Solution:-
 
 #include<bits/stdc++.h>
 using namespace std;

@@ -9,11 +9,9 @@ void explainCount(){
     auto i = count(arr,arr+5,num);
     cout << i;
 
-    
-
 }
 
 int main(){
-    explainCount();
+    explainCount();                                   
     return 0;
 }

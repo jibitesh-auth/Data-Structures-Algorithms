@@ -1,4 +1,6 @@
 /*
+//*Question:-
+
 Problem: Sum of the First and Last Element of an Array
 
 Problem Statement:
@@ -52,15 +54,8 @@ Constraints:
 -100 <= nums[i] <= 100
 */
 
-
-
-
-
-
 //---------------------------x------------------------
-
-
-
+//*Solution:-
 
 #include<bits/stdc++.h>
 using namespace std;

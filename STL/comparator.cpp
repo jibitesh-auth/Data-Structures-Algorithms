@@ -9,7 +9,7 @@ bool internalComparator(int el1, int el2){
     return true;
 }
 
-void explainComparator(){
+void explainComparator(){ 
     int arr[] = {5,6,1,2};
     // el1 is 5
     // el2 is 6
@@ -17,7 +17,8 @@ void explainComparator(){
     // and tells you if el1 should be before el2 or not
 
     // el1 is 6
-    // el2 is 1 --------No (1 should be before 6)
+    // el2 is 1 
+    //No (1 should be before 6)
     // sort(arr,arr+4); //*Default Internal Comparator(Ascending)
     // for(int i=0; i<4; i++){
     //     cout << arr[i] << " ";

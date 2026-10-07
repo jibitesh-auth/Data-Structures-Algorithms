@@ -14,8 +14,8 @@ void explainNext_PrevPermutation(){
     //bca
     //cab
     //cba
-  
-    string str = "bca";
+
+    string str = "cba";
 
     //*Output
     //bca
@@ -25,10 +25,10 @@ void explainNext_PrevPermutation(){
     do{
         cout << str << endl;
 
-    // }while(next_permutation(str.begin(),str.end()));
+    //}while(next_permutation(str.begin(),str.end()));
 
     //*Part of the String
-    // }while(next_permutation(str.begin(),str.begin()+2)); 
+    //}while(next_permutation(str.begin(),str.begin()+2)); 
 
     //*Output(str = "bca")=>
     //bca
@@ -36,7 +36,7 @@ void explainNext_PrevPermutation(){
 
 
     //*Previous Permutation
-    }while(prev_permutation(str.begin(),str.end()));
+    }while(prev_permutation(str.begin(),str.end()-1));
 
     //*Output(str="bca")=>
     //bca

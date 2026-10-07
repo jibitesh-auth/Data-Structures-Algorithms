@@ -1,62 +1,33 @@
 /*
-Valid Anagram
+Given two strings s and t, return true if t is an anagram of s, and false otherwise.
 
-Given two strings `s` and `t`, return `true` if `t` is an anagram of `s`, otherwise return `false`.
+An Anagram is a word or phrase formed by rearranging the letters of a different word or phrase, typically using all the original letters exactly once.
 
-Two strings are anagrams if they contain the **same characters with the same frequencies**, possibly in a different order.
+Example 1:
+Input : s = "anagram" , t = "nagaram"
 
-Example:
+Output : true
 
-s = "anagram"
-t = "nagaram"
+Explanation :
 
-Output: true
+We can rearrange the characters of string s to get string t as frequency of all characters from both strings is same.
 
-Constraints:
+Example 2:
+Input : s = "dog" , t = "cat"
 
--> 1 <= s.length, t.length <= 5 * 10^4
--> Only lowercase English letters.
+Output : false
+
+Explanation :
+
+We cannot rearrange the characters of string s to get string t as frequency of all characters from both strings is not same.
 
 */
-//---------------x-------------
+
+//*---------------x-------------
 
 //*Solution
 
 
-//*My Approach
-// #include <bits/stdc++.h>
-// using namespace std;
-
-
-// class Solution{
-//     public:
-//         bool anagramStrings(string& s, string& t){
-//             int arr[26] = {0};
-//             if(s.length() != t.length()) return false;
-//             for(int i=0; i<s.length(); i++){
-//                 arr[s[i] - 'a']+=1;
-//                 arr[t[i] - 'a'] +=1;
-//             }
-//             for(int i=0; i<s.length(); i++){
-//                 if(arr[s[i] - 'a'] != 2){
-//                     return false;
-//                 }
-//             }
-//             return true;
-
-        
-//         }
-// };
-// int main(){
-//     string s,t;
-//     cin >> s >> t;
-//     Solution sol;
-//     cout << sol.anagramStrings(s,t);
-//     return 0;
-// }
-
-//--------------------------X-----------------------
- 
 //*Optimal
 #include <bits/stdc++.h>
 using namespace std;
@@ -72,6 +43,7 @@ class Solution{
             transform(s.begin(),s.end(),s.begin(),::tolower)
             
             transform(t.begin(),t.end(),t.begin(),::tolower)
+            //*O(N)
             
             TO convert uppercase to lower*/
 

@@ -41,18 +41,7 @@ void explainPQ(){
 
     cout << pq.size();
 
-    
-
-
-
-
 }
-
-
-
-
-
-
 
 
 int main(){

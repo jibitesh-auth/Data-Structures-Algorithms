@@ -5,7 +5,7 @@ class array{
         // arr[1] = 6;
         // arr[3] = 9;
         // arr[4] = 1;
-        // // System.out.println(arr.length);//Run time error
+        // System.out.println(arr.length);//Run time error
 
         //---------x----------
 

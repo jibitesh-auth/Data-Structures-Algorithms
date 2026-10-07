@@ -1,4 +1,6 @@
 /*
+//*Question
+
 Problem: Check Whether a Person is an Adult or a Teen
 
 Problem Statement:
@@ -54,42 +56,9 @@ Constraints:
 0 <= age <= 100
 */
 
-
-
-
-
-
-
-//------------------x--------------------------------
-
-// #include<bits/stdc++.h>
-// using namespace std;
-
-// class Solution{
-//     public:
-//       void check(int age){
-//         cin >> age;
-//         if(age >= 18){
-//             cout <<"Adult" <<endl;
-
-//         }
-//         else{
-//             cout <<"Teen" << endl;
-//         }
-//       }
-
-// };
-
-// int main(){
-//     Solution s;
-//     int age;
-//     s.check(age);
-//     return 0;
-
-// }
-
-
 //--------------------------x------------------------------------
+
+//*Solution
 
 #include<bits/stdc++.h>
 using namespace std;

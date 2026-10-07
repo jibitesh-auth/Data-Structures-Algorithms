@@ -1,4 +1,6 @@
 /*
+//*Question:-
+
 Problem: Print the Last Character of a String
 
 Problem Statement:
@@ -47,13 +49,8 @@ Constraints:
 - The string consists only of lowercase English letters.
 */
 
-
-
-
 //---------------------------x------------------------
-
-
-
+//*Solution:-
 
 #include <bits/stdc++.h>
 using namespace std;

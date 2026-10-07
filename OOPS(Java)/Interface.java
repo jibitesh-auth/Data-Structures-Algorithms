@@ -1,13 +1,12 @@
 interface Animal{
     void bark();
-    // static void sleep(){
-    //     System.out.println("Sleeping...");
+    static void sleep1(){
+         System.out.println("Sleeping...");
 
-    // }
+     }
 
     default void sleep(){
         System.out.println("Sleeping...");
-
     }
 
 
@@ -28,8 +27,11 @@ class Dog implements Animal,Pet {
     // @Override
     public void sleep(){
         System.out.println("Dog is sleeping");
-        // super.sleep();
+        // super.sleep();---------> ERROR
+        Animal.super.sleep();   //*Will work
+
     }
+  
 
 }
 
@@ -46,7 +48,6 @@ class Cat implements Animal{
 
 class Interface{
     public static void main(String[] args){
-        // Animal.sleep();
         Dog dog = new Dog();
         dog.bark();
         dog.sleep();
@@ -54,6 +55,8 @@ class Interface{
         Cat cat = new Cat();
         cat.bark();
         cat.sleep();
+        Animal.sleep1();  //*Will work
+
         
 
 

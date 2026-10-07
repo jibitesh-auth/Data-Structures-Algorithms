@@ -2,7 +2,7 @@
 using namespace std;
 
 void explainQueue(){
-    //FIFO
+    //*FIFO
     queue<int> q;
     q.push(2);
     q.push(3);

@@ -87,7 +87,7 @@
 // import java.util.Scanner;
 // class Test{
 //     int age;
-//     //void method
+//   //*void method
 //     public void assignAge(int num){
 //         age = num;
         

@@ -1,4 +1,6 @@
 /*
+//*Question:-
+
 Problem: Print a Number N Times
 
 Problem Statement:
@@ -54,12 +56,8 @@ Constraints:
 */
 
 
-
-
-
 //---------------------------x------------------------
-
-
+//*Solution:-
 
 #include<bits/stdc++.h>
 using namespace std;

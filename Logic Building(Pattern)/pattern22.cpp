@@ -1,80 +1,20 @@
-// #include <bits/stdc++.h>
-// using namespace std;
+/*
+//* Given an integer n. 
+//* You need to recreate the pattern given below for any value of N. 
+//* Let's say for N = 5, the pattern should look like as below:
 
+//* 5 5 5 5 5 5 5 5 5 
+//* 5 4 4 4 4 4 4 4 5 
+//* 5 4 3 3 3 3 3 4 5 
+//* 5 4 3 2 2 2 3 4 5 
+//* 5 4 3 2 1 2 3 4 5 
+//* 5 4 3 2 2 2 3 4 5 
+//* 5 4 3 3 3 3 3 4 5 
+//* 5 4 4 4 4 4 4 4 5 
+//* 5 5 5 5 5 5 5 5 5
 
-// class Solution{
-//     public:
-       
-//         void pattern22(int n){
-           
-//            for(int i=n;i>=1;i--){
-//                 for(int j=n;j>=1;j--){
-//                     if(j>=i){
-//                         cout<<j;
-//                     }else{
-//                         cout<<i;
-//                     }
-
-//                 }
-//                 int t=i;
-//                 for(int k=1;k<=n-1;k++){
-//                     if(k<=i-1){
-//                         cout<<i;
-//                     }
-//                     else{
-                        
-//                         cout<<++i;
-//                     }
-//                 }
-//                 i=t;
-               
-                
-//                 cout<<endl;
-//             }
-//              for(int i=2;i<=n;i++){
-//                 for(int j=n;j>=1;j--){
-//                     if(j>=i){
-//                         cout<<j;
-//                     }else{
-//                         cout<<i;
-//                     }
-
-//                 }
-//                 int t=i;
-//                 for(int k=1;k<=n-1;k++){
-//                     if(k<=i-1){
-//                         cout<<i;
-//                     }
-//                     else{
-                        
-//                         cout<<++i;
-//                     }
-//                 }
-//                 i=t;
-               
-                
-//                 cout<<endl;
-//             }
-                
-              
-//             }
-
-// };
-
-
-// int main(){
-//     int n;
-//     cin >> n;
-//     Solution s;
-//     s.pattern22(n);
-//     return 0;
-
-// }
-
-
-//-------------------x------------------------
-//Optimized
-
+*/
+//------------------x------------------------
 
 #include <bits/stdc++.h>
 using namespace std;
@@ -85,17 +25,13 @@ public:
     void pattern22(int n) {
         
         for (int i = 0; i < 2 * n - 1; i++) {
-
-            
             for (int j = 0; j < 2 * n - 1; j++) {
 
-               
                 int top = i;
                 int left = j;
                 int right = (2 * n - 2) - j;
                 int bottom = (2 * n - 2) - i;
 
-               
                 cout << (n - min(min(top, bottom), min(left, right)));
                 if (j < 2 * n) cout << " ";
             }
@@ -118,136 +54,3 @@ int main() {
 
 //T.C: O(N^2)
 //S.C: O(1)
-
-//-----------------x-----------------------
-
-// #include <bits/stdc++.h>
-// using namespace std;
-
-// class Solution{
-//     public:
-//          void pattern22(int n){
-            //*1
-            // for(int i=n;i>=1;i--){
-            //     for(int j=n;j>=i;j--){
-                    
-            //         cout<<j;
-
-            //     }
-                
-            //     cout<<endl;
-            // }
-            //*2
-            // for(int i=n;i>=1;i--){
-            //     for(int j=n;j>=i;j--){
-                    
-            //         cout<<j;
-
-            //     }
-            //     for(int j=1;j<=i-1;j++){
-                    
-            //         cout<<i;
-
-            //     }
-                
-            //     cout<<endl;
-            //  }
-            //*3
-            // for(int i=n;i>=1;i--){
-            //     for(int j=n;j>=1;j--){
-            //         if(j>=i){
-            //             cout<<j;
-            //         }else{
-            //             cout<<i;
-            //         }
-
-            //     }
-               
-                
-            //     cout<<endl;
-            // }
-            //*4
-            // for(int i=n;i>=1;i--){
-            //     for(int j=n;j>=1;j--){
-            //         if(j>=i){
-            //             cout<<j;
-            //         }else{
-            //             cout<<i;
-            //         }
-
-            //     }
-            //     int t=i;
-            //     for(int k=1;k<=n-1;k++){
-            //         if(k<=i-1){
-            //             cout<<i;
-            //         }
-            //         else{
-                        
-            //             cout<<++i;
-            //         }
-            //     }
-            //     i=t;
-               
-                
-            //     cout<<endl;
-            // }
-            //*5
-//              for(int i=n;i>=1;i--){
-//                 for(int j=n;j>=1;j--){
-//                     if(j>=i){
-//                         cout<<j;
-//                     }else{
-//                         cout<<i;
-//                     }
-
-//                 }
-//                 int t=i;
-//                 for(int k=1;k<=n-1;k++){
-//                     if(k<=i-1){
-//                         cout<<i;
-//                     }
-//                     else{
-                        
-//                         cout<<++i;
-//                     }
-//                 }
-//                 i=t;
-               
-                
-//                 cout<<endl;
-//             }
-//              for(int i=2;i<=n;i++){
-//                 for(int j=n;j>=1;j--){
-//                     if(j>=i){
-//                         cout<<j;
-//                     }else{
-//                         cout<<i;
-//                     }
-
-//                 }
-//                 int t=i;
-//                 for(int k=1;k<=n-1;k++){
-//                     if(k<=i-1){
-//                         cout<<i;
-//                     }
-//                     else{
-                        
-//                         cout<<++i;
-//                     }
-//                 }
-//                 i=t;
-               
-                
-//                 cout<<endl;
-//             }
-
-//          }
-
-// };
-// int main(){
-//     Solution s;
-//     int N;
-//     cin>>N;
-//     s.pattern22(N);
-//     return 0;
-// }

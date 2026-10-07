@@ -3,11 +3,11 @@ using namespace std;
 
 void explainVector(){
     // int arr[5];   //*Can't change size
-    vector<int> vec;
-    vec.push_back(1);
-    vec.push_back(2);
-    vec.push_back(0);
-    vec.emplace_back(5);
+    // vector<int> vec;
+    // vec.push_back(1);
+    // vec.push_back(2);
+    // vec.push_back(0);
+    // vec.emplace_back(5);
     // cout<<vec.size()<<endl;
 
     //*0 based indexing
@@ -21,7 +21,7 @@ void explainVector(){
     // vector<int>:: iterator endItr = 
     // vec.end();
 
-    // endItr = endItr -1;
+    //* //endItr = endItr -1;
 
     // cout<< *endItr <<" "<< *beginItr;
     // for(vector<int>:: iterator i = beginItr; i<endItr; i++){
@@ -114,6 +114,7 @@ void explainVector(){
     //*access element
     // cout<< vec[2] <<endl;
     // cout << vec.at(2);
+    //*Because it is contiguous
 
     //*swap
     // vector<int> v1 = {7,8};
@@ -128,12 +129,11 @@ void explainVector(){
     //*insert
     vector<int> v1 = {4,5,6,7};
     vector<int> v2 = {4,4,6,3,5};
-    // v1.insert(v1.begin()+2,10);
-    // v1.insert(v1.end()-1,10);
-    // for(auto it: v1){
-    //     cout << it << " ";
-    // }
-    
+    v1.insert(v1.begin()+2,10);
+    v1.insert(v1.end()-1,10);
+    for(auto it: v1){
+        cout << it << " ";
+    }
     
 };
 

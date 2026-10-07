@@ -1,4 +1,6 @@
 /*
+//*Question:-
+
 Problem: Print the Given Number
 
 Problem Statement:
@@ -47,17 +49,9 @@ Constraints:
 -1000 <= Number <= 1000
 */
 
-
-
-
-
-
-
 //---------------------------x------------------------
 
-
-
-
+//*Solution:-
 
 #include <bits/stdc++.h>
 using namespace std;
