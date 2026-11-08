@@ -1,0 +1,87 @@
+/*
+Given an integer array nums of size n, return the majority element of the array.
+
+The majority element of an array is an element that appears more than n/2 times in the array. The array is guaranteed to have a majority element.
+
+Example 1:
+Input: nums = [7, 0, 0, 1, 7, 7, 2, 7, 7]
+
+Output: 7
+
+Explanation:
+
+The number 7 appears 5 times in the 9 sized array
+
+Example 2:
+Input: nums = [1, 1, 1, 2, 1, 2]
+
+Output: 1
+
+Explanation:
+
+The number 1 appears 4 times in the 6 sized array
+*/
+
+
+#include <bits/stdc++.h>
+using namespace std;
+
+//*Brute
+// class Solution{
+//     public:
+//         int majorityElement(vector<int>& nums){
+//             int n = nums.size();
+//             for(int i=0; i<n; i++){
+//                 int cnt = 0;
+//                 for(int j=0; j<n; j++){
+//                     if(nums[i]== nums[j]){
+//                         cnt++;
+//                     }
+
+//                 }
+//                 if(cnt > (n/2)){
+//                     return nums[i];
+//                 }
+//             }
+//             return -1;
+
+//         }
+// };
+//*T.C: O(N^2)
+//*S.C: O(1)
+
+//*Better[Hashing]
+
+class Solution{
+    public:
+        int majorityElement(vector<int>& nums){
+            int n = nums.size();
+            unordered_map<int,int> mp;
+            for(int num: nums){
+                mp[num]++;
+            }
+
+            for(auto& pair: mp){
+                if(pair.second > n/2){
+                    return pair.first;
+                }
+            }
+            return -1;
+        }
+        
+};
+//*T.C: O(N)
+//*S.C: O(N)
+
+int main(){
+    vector<int> vec;
+    int x;
+    while(cin >> x){
+        vec.push_back(x);
+    }
+    Solution sol;
+    cout << sol.majorityElement(vec);
+
+    return 0;
+
+}
