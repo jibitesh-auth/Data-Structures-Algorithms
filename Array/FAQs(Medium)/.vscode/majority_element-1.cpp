@@ -52,26 +52,67 @@ using namespace std;
 
 //*Better[Hashing]
 
-class Solution{
-    public:
-        int majorityElement(vector<int>& nums){
-            int n = nums.size();
-            unordered_map<int,int> mp;
-            for(int num: nums){
-                mp[num]++;
-            }
+// class Solution{
+//     public:
+//         int majorityElement(vector<int>& nums){
+//             int n = nums.size();
+//             unordered_map<int,int> mp;
+//             for(int num: nums){
+//                 mp[num]++;
+//             }
 
-            for(auto& pair: mp){
-                if(pair.second > n/2){
-                    return pair.first;
-                }
-            }
-            return -1;
-        }
+//             for(auto& pair: mp){
+//                 if(pair.second > n/2){
+//                     return pair.first;
+//                 }
+//             }
+//             return -1;
+//         }
         
-};
+// };
 //*T.C: O(N)
 //*S.C: O(N)
+
+//*Optimal[Moore's Voting Algorithm]
+
+class Solution{
+    public:
+        int majorityElement(vector<int>& num){
+            int n = num.size();
+            int cnt = 0;
+            int el;
+
+            for(int i = 0; i<n; i++){
+                if(cnt == 0){
+                    cnt = 1;
+                    el = num[i];
+                }
+                else if(el == num[i]){
+                    cnt++;
+                }
+                else{
+                    cnt--;
+                }
+            }
+            if(cnt == 0){
+                return -1;
+            }
+            
+            int cnt1 = 0;
+            for(int i=0; i<n; i++){
+                if(num[i] == el){
+                    cnt1++;
+                }
+            }
+            if(cnt1 > n/2){
+                return el;
+            }
+
+            return -1;
+        }
+};
+//*T.C: O(N)+O(N)
+//*S.C: O(1)
 
 int main(){
     vector<int> vec;
