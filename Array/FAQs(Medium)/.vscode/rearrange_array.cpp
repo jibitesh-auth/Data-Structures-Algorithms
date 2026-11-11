@@ -27,43 +27,62 @@ The positive number 1, 2, 3 maintain their relative positions and -1, -3, -4 mai
 using namespace std;
 
 //*Brute
-class Solution{
-    public:
-        vector<int> rearrangeArray(vector<int>& nums){
-            int n = nums.size();
-            vector<int> pos,neg;
-            for(int i=0; i< n; i++){
-                if(nums[i] >= 0){
-                    pos.push_back(nums[i]);
-                }
-                else{
-                    neg.push_back(nums[i]);
-                }
-            }
-
-            for(int i=0; i<n/2; i++){
-                nums[2*i] = pos[i];
-                nums[2*i + 1] = neg[i];
-            }
-
-            return nums;
-
-        }
-};
-
-//*T.C:
-//*S.C:
-
-//*Optimal
 // class Solution{
 //     public:
 //         vector<int> rearrangeArray(vector<int>& nums){
+//             int n = nums.size();
+//             vector<int> pos,neg;
+//             for(int i=0; i< n; i++){
+//                 if(nums[i] >= 0){
+//                     pos.push_back(nums[i]);
+//                 }
+//                 else{
+//                     neg.push_back(nums[i]);
+//                 }
+//             }
+
+//             for(int i=0; i<n/2; i++){
+//                 nums[2*i] = pos[i];
+//                 nums[2*i + 1] = neg[i];
+//             }
+
+//             return nums;
 
 //         }
 // };
 
-//*T.C:
-//*S.C:
+//*T.C: O(N) + O(N/2)
+//*S.C: O(N/2 + N/2) = O(N)
+
+//*Optimal
+class Solution{
+    public:
+        vector<int> rearrangeArray(vector<int>& nums){
+             int n = nums.size();
+             vector<int> ans(n,0);
+             int posIndex = 0, negIndex = 1;
+
+            for(int i=0; i<n; i++){
+                if(nums[i] < 0){
+                    ans[negIndex] = nums[i];
+
+                    negIndex +=2;
+                    
+                }
+                else{
+                    ans[posIndex] = nums[i];
+                   
+                    posIndex +=2;
+                }
+            }
+
+            return ans;
+        }
+};
+
+//*T.C: O(N)
+//*S.C: O(N) -> Display
+
 int main(){
     vector<int> nums;
     int x;
