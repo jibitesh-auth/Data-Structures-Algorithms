@@ -26,29 +26,54 @@ nums[1] + nums[5] = 3 + (-3) = 0
 using namespace std;
 
 //*Brute
-class Solution{
-    public:
-        vector<int> twoSum(vector<int>& nums, int target){
-            vector<int> ans;
-            int n = nums.size();
-            for(int i=0; i<n; i++){
-                for(int j=i+1; j<n; j++){
-                    if(nums[i] + nums[j] == target){
-                        ans.push_back(i);
-                        ans.push_back(j);
-                        return ans;
+// class Solution{
+//     public:
+//         vector<int> twoSum(vector<int>& nums, int target){
+//             vector<int> ans;
+//             int n = nums.size();
+//             for(int i=0; i<n; i++){
+//                 for(int j=i+1; j<n; j++){
+//                     if(nums[i] + nums[j] == target){
+//                         ans.push_back(i);
+//                         ans.push_back(j);
+//                         return ans;
 
-                    }
+//                     }
 
-                }
-            }
-            return {-1,-1};
-        }
+//                 }
+//             }
+//             return {-1,-1};
+//         }
 
-};
+// };
 
 //*T.C: O(n^2)
-//*S.C: O(n) -> 
+//*S.C: O(n) -> display, O(1) -> solving
+
+//*Better
+class Solution{
+    public:
+    vector<int> twoSum(vector<int>& nums, int target){
+        unordered_map<int,int> mpp;
+        int n = nums.size();
+        for(int i=0; i<n; i++){
+            int num = nums[i];
+            int moreNeeded = target - num;
+            if(mpp.find(moreNeeded) != mpp.end()){
+                return {mpp[moreNeeded],i};
+            }
+            mpp[num] = i;
+
+        }
+        return {-1,-1};
+
+    }
+};
+
+//*T.C: O(N)
+//if ordered map -> worst complexity: O(Nlogn)
+//if unordered map worst complexity: O(N^2)
+//*S.C: O(N)
 
 int main(){
     vector<int> vec;
