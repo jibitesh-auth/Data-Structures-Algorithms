@@ -51,29 +51,72 @@ using namespace std;
 //*S.C: O(n) -> display, O(1) -> solving
 
 //*Better
-class Solution{
-    public:
-    vector<int> twoSum(vector<int>& nums, int target){
-        unordered_map<int,int> mpp;
-        int n = nums.size();
-        for(int i=0; i<n; i++){
-            int num = nums[i];
-            int moreNeeded = target - num;
-            if(mpp.find(moreNeeded) != mpp.end()){
-                return {mpp[moreNeeded],i};
-            }
-            mpp[num] = i;
+// class Solution{
+//     public:
+//     vector<int> twoSum(vector<int>& nums, int target){
+//         unordered_map<int,int> mpp;
+//         int n = nums.size();
+//         for(int i=0; i<n; i++){
+//             int num = nums[i];
+//             int moreNeeded = target - num;
+//             if(mpp.find(moreNeeded) != mpp.end()){
+//                 return {mpp[moreNeeded],i};
+//             }
+//             mpp[num] = i;
 
-        }
-        return {-1,-1};
+//         }
+//         return {-1,-1};
 
-    }
-};
+//     }
+// };
 
 //*T.C: O(N)
 //if ordered map -> worst complexity: O(Nlogn)
 //if unordered map worst complexity: O(N^2)
 //*S.C: O(N)
+
+//*Optimal
+class Solution{
+    public:
+        vector<int> twoSum(vector<int>& nums,int target){
+            int n = nums.size();
+            vector<int> ans;
+
+            vector<vector<int>> eleIndex;
+            for(int i=0; i<n; i++){
+                eleIndex.push_back({nums[i],i});
+            }
+
+            sort(eleIndex.begin(),eleIndex.end(),[](const vector<int>& a, const vector<int>& b) {
+                return a[0] < b[0];
+
+            });
+            int left =0, right=n-1;
+            while(left < right){
+                int sum= eleIndex[left][0] + eleIndex[right][0];
+
+                if(sum == target){
+                    ans.push_back(eleIndex[left][1]);
+                    ans.push_back(eleIndex[right][1]);
+                }
+                else if(sum < target){
+                    left++;
+                }
+                else{
+                    right--;
+                }
+            }
+
+
+            return {-1,-1};
+
+
+        }
+};
+
+//*T.C: O(N)+O(NlogN)
+//*S.C: O(N) -> as column only 2
+
 
 int main(){
     vector<int> vec;
