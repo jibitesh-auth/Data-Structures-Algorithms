@@ -117,17 +117,59 @@ using namespace std;
 //*S.C: O(1)
 
 //*Optimal-II
+class Solution{
+    public:
+        vector<int> findMissingRepeatingNumbers(vector<int>& nums){
+            int n = nums.size();
+            int xr = 0;
+
+            for(int i=0; i<n; i++){
+                xr= xr^nums[i];
+                xr = xr^(i+1);
+            }
+            //Find the rightmost set bit(1) index to separate xr into 2 parts for Repeating & Missing
+            //*Here we will get 2^ value not index(For code)
+            int number = (xr & ~(xr-1)); 
+            int zero = 0,one = 0;
+
+            for(int i=0; i<n; i++){
+                //We check whether that number has 0 or 1 in that particular index
+                if((nums[i] & number) != 0){
+                    one = one^nums[i];
+                }
+                else{
+                    zero=zero^nums[i];
+                }
+            }
+
+            for(int i=1; i<=n; i++){
+                if((i & number) != 0){
+                    one = one ^ i;
+                }
+                else{
+                    zero = zero ^ i;
+                }
+            }
+
+            int cnt=0;
+            for(int i=0; i<n; i++){
+                if(nums[i] == zero){
+                    cnt++;
+                }
+            }
+
+            if(cnt == 2){
+                return{zero,one};
+            }
+
+            return {one,zero};
 
 
+        }
+};
 
-
-
-
-
-
-
-
-
+//*T.C: O(N)
+//*S.C: O(1)
 
 
 
